@@ -1,10 +1,9 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+
+from rest_framework.viewsets import ModelViewSet
+from toDo.models import Tasks
+from toDo.serializers import TaskSerializer
 
 
-def setTask(request):
-    return render(request, 'toDo/index.html')
-
-
-def getTask(request):
-    return render(request, 'toDo/getTasker.html')
+class TaskViewSet(ModelViewSet):
+    queryset = Tasks.objects.all()
+    serializer_class = TaskSerializer

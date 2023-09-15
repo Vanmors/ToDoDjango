@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'taskmanager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '<dbname>',
-        'USER': 'postgres',
-        'PASSWORD': '<password>',
+        'NAME': 'toDo_db',
+        'USER': 'toDo_user',
+        'PASSWORD': '',
         'HOST': 'localhost',
-        'PORT': 5432,
+        'PORT': '',
     }
 }
 
